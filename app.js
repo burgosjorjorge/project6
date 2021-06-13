@@ -3,6 +3,7 @@
 const keyboard = document.querySelector('#qwerty');
 const phrase = document.querySelector('#phrase');
 const reset = document.querySelector('.btn__reset');
+
 let missed = 0;
 
 // Array
@@ -34,7 +35,7 @@ getRandomPhraseAsArray(phrases);
 
 function addPhaseToDisplay(arr) {
      for (let i = 0; i < arr.length; i ++ ) {
-         let list = document.createElement('li');
+        let list = document.createElement('li');
          list.textContent = arr[i];
          phrase.appendChild(list);
          if (list) {
@@ -44,7 +45,20 @@ function addPhaseToDisplay(arr) {
          }
          
      }
+     
 }
 
 const phaseArray = getRandomPhraseAsArray(phrases);
 addPhaseToDisplay(phaseArray);
+
+function checkLetter(myKey) {
+    const checkList = list;
+    let value = '';
+    for (let i = 0; i < list.length; i ++) {
+        if(myKey === value) {
+            list.className = 'show';
+            value.textContent = checkList;
+        }
+    }
+    return value;
+}
