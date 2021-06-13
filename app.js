@@ -15,6 +15,17 @@ const phrases = [
     'Friday'
 ];
 
+// reset button event listerner
+
 reset.addEventListener('click', () => {
     overlay.style.display = 'none';
 });
+
+// random phrase function
+
+function getRandomPhraseAsArray(arr) {
+    let random = arr[Math.floor(Math.random() * arr.length)].split("");
+    return random;
+}
+
+getRandomPhraseAsArray(phrases);
