@@ -3,6 +3,8 @@
 const keyboard = document.querySelector('#qwerty');
 const phrase = document.querySelector('#phrase');
 const reset = document.querySelector('.btn__reset');
+const tries = document.querySelector('.tries');
+const key = document.querySelector('.keyrow');
 
 let missed = 0;
 
@@ -62,3 +64,11 @@ function checkLetter(myKey) {
     }
     return value;
 }
+
+keyboard.addEventListener('click', (e) => {
+    if (key.disable) {
+        key.className = 'chosen';
+    }else {
+        key.className = '';
+    }
+});
