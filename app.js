@@ -29,3 +29,22 @@ function getRandomPhraseAsArray(arr) {
 }
 
 getRandomPhraseAsArray(phrases);
+
+// add to display function
+
+function addPhaseToDisplay(arr) {
+     for (let i = 0; i < arr.length; i ++ ) {
+         let list = document.createElement('li');
+         list.textContent = arr[i];
+         phrase.appendChild(list);
+         if (list) {
+             list.className = 'letter';
+         } else {
+             list.className = 'space';
+         }
+         
+     }
+}
+
+const phaseArray = getRandomPhraseAsArray(phrases);
+addPhaseToDisplay(phaseArray);
